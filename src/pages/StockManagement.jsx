@@ -17,7 +17,7 @@ export default function StockManagement() {
 
   const fetchProducts = async () => {
     try {
-      const res = await fetch('http://localhost:3000/api/products');
+      const res = await fetch('/api/products');
       const data = await res.json();
       setProducts(data);
     } catch (error) {
@@ -31,7 +31,7 @@ export default function StockManagement() {
     e.preventDefault();
     
     try {
-      const res = await fetch('http://localhost:3000/api/stock/adjust', {
+      const res = await fetch('/api/stock/adjust', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

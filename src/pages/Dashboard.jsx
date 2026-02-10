@@ -13,8 +13,8 @@ export default function Dashboard() {
   const fetchData = async () => {
     try {
       const [dashRes, productsRes] = await Promise.all([
-        fetch('http://localhost:3000/api/dashboard'),
-        fetch('http://localhost:3000/api/products')
+        fetch('/api/dashboard'),
+        fetch('/api/products')
       ]);
       
       const dashData = await dashRes.json();

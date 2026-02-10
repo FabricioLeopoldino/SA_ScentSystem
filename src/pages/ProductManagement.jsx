@@ -35,7 +35,7 @@ export default function ProductManagement({ user }) {
 
   const fetchProducts = async () => {
     try {
-      const res = await fetch('http://localhost:3000/api/products');
+      const res = await fetch('/api/products');
       const data = await res.json();
       setProducts(data);
       setLoading(false);
@@ -68,8 +68,8 @@ export default function ProductManagement({ user }) {
     
     try {
       const url = editingProduct 
-        ? `http://localhost:3000/api/products/${editingProduct.id}`
-        : 'http://localhost:3000/api/products';
+        ? `/api/products/${editingProduct.id}`
+        : '/api/products';
       
       const method = editingProduct ? 'PUT' : 'POST';
       
@@ -95,7 +95,7 @@ export default function ProductManagement({ user }) {
     if (!confirm('Are you sure you want to delete this product?')) return;
     
     try {
-      const res = await fetch(`http://localhost:3000/api/products/${productId}`, {
+      const res = await fetch(`/api/products/${productId}`, {
         method: 'DELETE'
       });
       

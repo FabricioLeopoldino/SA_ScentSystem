@@ -13,7 +13,7 @@ export default function TransactionHistory() {
 
   const fetchTransactions = async () => {
     try {
-      const res = await fetch('http://localhost:3000/api/transactions');
+      const res = await fetch('/api/transactions');
       const data = await res.json();
       setTransactions(data);
     } catch (error) {

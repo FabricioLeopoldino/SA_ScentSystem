@@ -27,7 +27,7 @@ export default function Attachments() {
   const fetchAttachments = async () => {
     try {
       setLoading(true);
-      let url = 'http://localhost:3000/api/attachments';
+      let url = '/api/attachments';
       const params = new URLSearchParams();
       
       if (filterOilId) params.append('oilId', filterOilId);
@@ -48,7 +48,7 @@ export default function Attachments() {
 
   const fetchOils = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/products?category=OILS');
+      const response = await fetch('/api/products?category=OILS');
       const data = await response.json();
       setOils(data);
     } catch (error) {
@@ -91,7 +91,7 @@ export default function Attachments() {
       formData.append('uploadedBy', currentUser.name || 'admin');
       formData.append('notes', notes);
 
-      const response = await fetch('http://localhost:3000/api/attachments/upload', {
+      const response = await fetch('/api/attachments/upload', {
         method: 'POST',
         body: formData
       });
@@ -124,7 +124,7 @@ export default function Attachments() {
     }
 
     try {
-      const response = await fetch(`http://localhost:3000/api/attachments/${id}`, {
+      const response = await fetch(`/api/attachments/${id}`, {
         method: 'DELETE'
       });
 
@@ -142,7 +142,7 @@ export default function Attachments() {
 
   const handleDownload = (filePath, fileName) => {
     const link = document.createElement('a');
-    link.href = `http://localhost:3000${filePath}`;
+    link.href = `${filePath}`;
     link.download = fileName;
     link.target = '_blank';
     document.body.appendChild(link);
