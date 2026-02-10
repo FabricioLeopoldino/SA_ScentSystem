@@ -44,14 +44,6 @@ Pronto! O sistema vai:
 - Iniciar servidor e frontend
 - Abrir no navegador
 
----
-
-## 🔐 Login Padrão
-
-```
-Email: admin@scentaustralia.com
-Senha: admin123
-```
 
 ---
 
@@ -160,22 +152,6 @@ scent_stock_final/
 → Use o IP correto mostrado ao iniciar  
 → Desative firewall temporariamente para testar
 
----
-
-## 📞 Suporte
-
-**Desenvolvido por LeautoTech**  
-Fabricio & Pamela Leopoldino - 2025
-
----
-
-## 🎯 Próximos Passos
-
-1. ✅ Fazer backup do `database.json`
-2. ✅ Testar acesso via tablet/celular
-3. ✅ Configurar webhook do Shopify
-4. ✅ Criar mapeamentos SKU
-5. ✅ Fazer pedido teste no Shopify
 
 ---
 
