@@ -12,10 +12,6 @@
    3. Aguardar instalação automática
    4. Sistema abre no navegador
 
-🔐 LOGIN:
-   Email: admin@scentaustralia.com
-   Senha: admin123
-
 📱 ACESSAR DO TABLET/CELULAR:
    1. Mesma rede Wi-Fi
    2. Anotar o IP mostrado ao iniciar
